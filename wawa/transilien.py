@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2013,2014,2016 Jérémie DECOCK (http://www.jdhp.org)
@@ -21,24 +21,31 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+import argparse
 import feedparser
 
+LINES = ['A', 'B', 'C', 'D', 'E', 'H', 'J', 'K', 'L', 'N', 'P', 'R', 'U']
+
 def transilien(line):
-    rss_str = ""
+    rss_str = None
 
     line = line.upper()
-    lines = ['A', 'B', 'C', 'D']
 
-    if (line in lines):
+    if line in LINES:
         rss_url = "http://www.transilien.com/flux/rss/traficLigne?codeLigne=" + line
         feed_dict = feedparser.parse(rss_url)
-        #entries_set = {(entry['published'], entry['title']) for entry in feed_dict.entries}
         entries_set = {entry['title'] for entry in feed_dict.entries}
 
-        for entry in entries_set:
-            rss_str += entry      # TODO
+        rss_str = " ; ".join(entries_set)
 
     return rss_str
 
-#if __name__ == '__main__':
-#    transilien(sys.args[0])
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="...")
+    parser.add_argument("arg", nargs=1, metavar="STRING",
+                        help="The line id (A, B, C, D, E, H, J, K, L, N, P, R, U)")
+
+    args = parser.parse_args()
+
+    print(transilien(args.arg[0]))

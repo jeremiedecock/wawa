@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2013,2014,2016 Jérémie DECOCK (http://www.jdhp.org)
@@ -21,9 +21,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+import argparse
 import feedparser
 
-YAHOO_CITY_CODES_DICT = {'cergy': '583634', 'orsay':'55863553', 'paris': '615702'}
+YAHOO_CITY_CODES_DICT = {
+    'cergy': '583634',
+    'orsay':'55863553',
+    'paris': '615702'
+    }
 
 def weather_yahoo(city):
     weather_str_tuple = ("-", "")
@@ -68,5 +73,13 @@ def weather_yahoo(city):
 
     return weather_str_tuple
 
-#if __name__ == '__main__':
-#    weather_yahoo(sys.args[0])
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="...")
+    parser.add_argument("arg", nargs=1, metavar="STRING",
+                        help="...")
+
+    args = parser.parse_args()
+
+    print(weather_yahoo(args.arg[0]))
+
