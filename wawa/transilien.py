@@ -21,6 +21,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+"""
+TODO...
+"""
+
+__all__ = ['transilien']
+
 import argparse
 import feedparser
 
@@ -41,7 +47,7 @@ def transilien(line):
     return rss_str
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description="...")
     parser.add_argument("arg", nargs=1, metavar="STRING",
                         help="The line id (A, B, C, D, E, H, J, K, L, N, P, R, U)")
@@ -49,3 +55,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     print(transilien(args.arg[0]))
+
+
+if __name__ == '__main__':
+    main()
