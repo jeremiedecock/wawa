@@ -5,6 +5,7 @@
 - [x] Transilien
 - [ ] Vianavigo
 - [ ] Google schoolar, Microsoft, ACM, IEEE, ...
+- [ ] Researchgate
 - [ ] Google contest
 - [ ] RNSA
 - [ ] Airparif
