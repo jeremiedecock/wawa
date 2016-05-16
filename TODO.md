@@ -10,6 +10,7 @@
 - [ ] RNSA
 - [ ] Airparif
 - [ ] Weather
+- [ ] Meteofrance "va-t-il pleuvoir dans l'heure"
 - [ ] MOOC FUN
 - [ ] Podcasts Radio France
 - [ ] Sytadin
