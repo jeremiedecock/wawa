@@ -22,6 +22,9 @@
 - [ ] Job adverts (lesjeudis, ...)
 - [ ] Youtube
 - [ ] http://packs.shtooka.net/
+- [ ] Pinterest
+- [ ] Flickr
+- [ ] FIP archives
 
 ## Common
 
