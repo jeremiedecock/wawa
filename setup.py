@@ -80,7 +80,7 @@ SCRIPTS = ["wawa/transilien"]
 # Syntax: "name_of_the_command_to_make = package.module:function".
 ENTRY_POINTS = {
   'console_scripts': [
-      'transilien = wawa.transilien:main',
+      'wawa-transilien = wawa.transilien:main',
   ],
 }
 
