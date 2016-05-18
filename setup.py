@@ -72,7 +72,8 @@ PACKAGES = ['wawa']
 INSTALL_REQUIRES = []
 
 
-SCRIPTS = ["wawa/transilien"]
+#SCRIPTS = ["wawa/transilien"]
+SCRIPTS = []
 
 
 # Entry point can be used to create plugins or to automatically generate
