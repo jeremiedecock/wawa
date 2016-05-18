@@ -12,6 +12,7 @@
 - [ ] Weather
 - [ ] Meteofrance "va-t-il pleuvoir dans l'heure"
 - [ ] MOOC FUN
+- [ ] Seloger.com
 - [ ] Podcasts Radio France
 - [ ] Sytadin
 - [ ] Google maps (path distance and duration)
